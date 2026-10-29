@@ -8,7 +8,7 @@ Exercises
 4. Change the snake to respond to mouse clicks.
 """
 
-from random import randrange, sample
+from random import randrange, sample, choice
 from turtle import *
 
 from freegames import square, vector
@@ -50,6 +50,10 @@ def move():
     else:
         snake.pop(0)
 
+
+    movimiento_comida = choice([vector(10, 0), vector(-10, 0), vector(0, 10), vector(0, -10)])
+    if inside(food + movimiento_comida):
+        food.move(movimiento_comida)    
     clear()
 
     for body in snake:
