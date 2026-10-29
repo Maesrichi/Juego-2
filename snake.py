@@ -53,7 +53,7 @@ def move():
 
     movimiento_comida = choice([vector(10, 0), vector(-10, 0), vector(0, 10), vector(0, -10)])
     if inside(food + movimiento_comida):
-        food.move(movimiento_comida)    
+        food.move(movimiento_comida)
     clear()
 
     for body in snake:
